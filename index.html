@@ -3,73 +3,164 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kontakt aufnehmen</title>
+    <title>Baumaschinen Handel</title>
     <style>
         * {
-            box-sizing: border-box;
             margin: 0;
             padding: 0;
-            font-family: Arial, sans-serif;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
         }
         body {
-            background: linear-gradient(135deg, #007bff, #00d4ff);
+            background-color: #f4f4f4;
             color: #333;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            padding: 20px;
         }
-        .container {
-            background: #fff;
-            padding: 30px;
-            border-radius: 10px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-            width: 100%;
-            max-width: 400px;
+
+        header {
+            background: #2c3e50;
+            color: #fff;
+            padding: 20px 0;
             text-align: center;
         }
-        h2 {
-            margin-bottom: 20px;
-            color: #007bff;
+
+        header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
         }
-        input, textarea {
-            width: 100%;
-            padding: 10px;
-            margin: 10px 0;
-            border: 1px solid #ccc;
-            border-radius: 5px;
+
+        header p {
+            font-size: 1.1em;
         }
-        button {
+
+        .hero {
+            background: url('https://via.placeholder.com/1500x800?text=Baumaschinen') no-repeat center center/cover;
+            height: 400px;
+            color: #fff;
+            text-align: center;
+            padding: 100px 0;
+        }
+
+        .hero h2 {
+            font-size: 3em;
+            margin-bottom: 10px;
+        }
+
+        .hero p {
+            font-size: 1.3em;
+            font-weight: 300;
+        }
+
+        .container {
+            width: 90%;
+            margin: 40px auto;
+            text-align: center;
+        }
+
+        .products {
+            display: flex;
+            justify-content: space-around;
+            margin-bottom: 50px;
+        }
+
+        .product-card {
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            width: 30%;
+            transition: transform 0.3s;
+        }
+
+        .product-card img {
             width: 100%;
-            padding: 10px;
-            background: #007bff;
+            border-radius: 10px 10px 0 0;
+        }
+
+        .product-card:hover {
+            transform: scale(1.05);
+        }
+
+        .product-card h3 {
+            background-color: #2980b9;
             color: white;
-            border: none;
+            padding: 10px;
+            font-size: 1.5em;
+        }
+
+        .product-card p {
+            padding: 10px;
+            font-size: 1.1em;
+            color: #555;
+        }
+
+        footer {
+            background-color: #2c3e50;
+            color: #fff;
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        footer p {
+            font-size: 1em;
+        }
+
+        .contact-btn {
+            background: #2980b9;
+            color: white;
+            padding: 15px;
+            text-decoration: none;
             border-radius: 5px;
-            cursor: pointer;
-            transition: 0.3s;
+            font-size: 1.2em;
+            margin-top: 20px;
+            display: inline-block;
         }
-        button:hover {
-            background: #0056b3;
+
+        .contact-btn:hover {
+            background: #1abc9c;
         }
-        .footer {
-            margin-top: 10px;
-            font-size: 12px;
-            color: #666;
-        }
+
     </style>
 </head>
 <body>
-    <div class="container">
-        <h2>Schreib mir eine Nachricht</h2>
-        <form action="mailto:deine@email.de" method="post" enctype="text/plain">
-            <input type="text" name="name" placeholder="Dein Name" required>
-            <input type="email" name="email" placeholder="Deine E-Mail" required>
-            <textarea name="message" rows="4" placeholder="Deine Nachricht" required></textarea>
-            <button type="submit">Senden</button>
-        </form>
-        <p class="footer">Ich melde mich so schnell wie möglich! 😊</p>
+
+<header>
+    <h1>Baumaschinen Handel</h1>
+    <p>Finden Sie hochwertige Maschinen für Ihr Bauprojekt</p>
+</header>
+
+<div class="hero">
+    <h2>Willkommen bei Ihrem Baumaschinen Partner!</h2>
+    <p>Wir bieten Ihnen eine breite Auswahl an Baumaschinen, die für jedes Bauvorhaben geeignet sind.</p>
+</div>
+
+<div class="container">
+    <h2>Unsere Maschinen</h2>
+    <div class="products">
+        <!-- Produkt 1 -->
+        <div class="product-card">
+            <img src="https://via.placeholder.com/400x300?text=Bagger" alt="Bagger">
+            <h3>Bagger</h3>
+            <p>Für schwere Erdarbeiten, mit unterschiedlichen Größen und Funktionen.</p>
+        </div>
+        <!-- Produkt 2 -->
+        <div class="product-card">
+            <img src="https://via.placeholder.com/400x300?text=Kran" alt="Kran">
+            <h3>Kran</h3>
+            <p>Hochwertige Krane für alle Anforderungen auf der Baustelle.</p>
+        </div>
+        <!-- Produkt 3 -->
+        <div class="product-card">
+            <img src="https://via.placeholder.com/400x300?text=Raupenfahrzeug" alt="Raupenfahrzeug">
+            <h3>Raupenfahrzeug</h3>
+            <p>Fahrzeuge für schwieriges Gelände – robust und zuverlässig.</p>
+        </div>
     </div>
+
+    <a href="mailto:deine@email.de" class="contact-btn">Kontakt aufnehmen</a>
+</div>
+
+<footer>
+    <p>&copy; 2025 Baumaschinen Handel | Alle Rechte vorbehalten</p>
+</footer>
+
 </body>
 </html>
